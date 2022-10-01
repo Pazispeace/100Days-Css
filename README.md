@@ -6,28 +6,28 @@ Repository of challenges solved by @Pazispeace from 100 Days of CSS
 
 - [Custom build number with gradient](https://codepen.io/pazispeace/pen/vYjjZKX)
 
-  - [Website Preview Solution]()
-  - [View code solution]()
+  - [Website Preview Solution](https://Pazispeace.github.io/100Days-Css/1-Custom-build-number)
+  - [View code solution](https://github.com/Pazispeace/100Days-Css/tree/gh-pages/1-Custom-build-number)
 
-- [Menu Icon]()
+- [Menu Icon](https://codepen.io/pazispeace/pen/BaxxZzw)
 
-  - [Website Preview Solution]()
-  - [View code solution]()
+  - [Website Preview Solution](https://Pazispeace.github.io/100Days-Css/2-Menu-icon)
+  - [View code solution](https://github.com/Pazispeace/100Days-Css/tree/gh-pages/2-Menu-icon)
 
-- [The Pyramide]()
+- [The Pyramide](https://codepen.io/pazispeace/pen/LYmmLRV)
 
-  - [Website Preview Solution]()
-  - [View code solution]()
+  - [Website Preview Solution](https://Pazispeace.github.io/100Days-Css/3-The-pyramide)
+  - [View code solution](https://github.com/Pazispeace/100Days-Css/tree/gh-pages/3-The-pyramide)
 
-- [Loading animation]()
+- [Loading animation](https://codepen.io/pazispeace/pen/YzLLQGW)
 
-  - [Website Preview Solution]()
-  - [View code solution]()
+  - [Website Preview Solution](https://Pazispeace.github.io/100Days-Css/4-Loading-animation)
+  - [View code solution](https://github.com/Pazispeace/100Days-Css/tree/gh-pages/4-Loading-animation)
 
-- [Statistic]()
+- [Statistic](https://codepen.io/pazispeace/pen/poVVwEO)
 
-  - [Website Preview Solution]()
-  - [View code solution]()
+  - [Website Preview Solution](https://Pazispeace.github.io/100Days-Css/5-Statistic)
+  - [View code solution](https://github.com/Pazispeace/100Days-Css/tree/gh-pages/5-Statistic)
 
 ## Author
 
