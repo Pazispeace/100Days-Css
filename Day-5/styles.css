@@ -1,0 +1,306 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+:root {
+  --white: #ffffff;
+  --background-color: #42A7A1;
+  --font-primary: 'Open Sans', Helvetica, sans-serif;
+  --semi-bold: 600;
+  --regular: 400;
+}
+
+.frame {
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  font-family: var(--font-primary);
+  color: var(--white);
+  background: var(--background-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* MY CSS */
+
+.card {
+  flex-direction: column;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
+
+}
+
+.data svg {
+  position: absolute;
+}
+
+.days {
+  display: flex;
+  padding: 0.3rem 0 0 0;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.days p {
+  margin: 0;
+  font-size: 9px;
+  color: #4e4e4e94;
+}
+
+.first-data polyline {
+  stroke: #FA7373;
+}
+
+.line,
+.line-2,
+.line-3 {
+  position: absolute;
+  width: 100%;
+  background-color: #4e4e4e23;
+}
+
+.line {
+  top: 0%;
+  height: 0.05rem;
+}
+
+.line-2 {
+  top: 50%;
+  height: 0.05rem;
+}
+
+.line-3 {
+  top: 100%;
+  height: 0.05rem;
+}
+
+.parameters {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1rem;
+}
+
+.parameters p {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  font-size: 9px;
+}
+
+.parameters p::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.18rem;
+  border-radius: 1rem;
+  background-color: #FA7373;
+  transform: translate(0, 50%);
+}
+
+.parameters p:last-child::before {
+  background-color: #7BA2FF;
+}
+
+polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.tooltips>* {
+  z-index: 1;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FA7373;
+  cursor: pointer;
+}
+
+.tooltips p {
+  position: relative;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  padding: 0.3rem 0.6rem;
+  font-size: 5px;
+  border-radius: 0.2rem;
+  color: var(--white);
+  background-color: #FA7373;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-33%, -100%);
+  transition: all 0.2s linear;
+}
+
+.tooltips>div:hover>p {
+  opacity: 1;
+  cursor: initial;
+  transform: translate(-33%, -130%);
+}
+
+.tooltips p::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: #FA7373;
+  transform: translate(-47%, 50%) rotate(47deg);
+}
+
+.second-data polyline {
+  stroke: #7BA2FF;
+}
+
+.statistics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem 0.3rem 0.5rem;
+  height: 3.5rem;
+  width: 17rem;
+  border-radius: 0.2rem 0.2rem 0 0;
+  background-color: #F1BA64;
+}
+
+.statistics-header p {
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics-header p:first-child {
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: var(--semi-bold);
+}
+
+.statistics-header p>small {
+  font-size: 11px;
+}
+
+.statistics-header p:last-child {
+  align-items: flex-end;
+  font-size: 11px;
+  font-weight: var(--semi-bold);
+}
+
+.statistics-header p>strong {
+  font-size: 14px;
+}
+
+.statistics-body {
+  padding: 0 0.5rem 0.3rem 0.5rem;
+  height: 9rem;
+  width: 17rem;
+  border-radius: 0 0 0.2rem 0.5rem;
+  color: #606060;
+  background-color: var(--white);
+}
+
+.statistics-content {
+  position: relative;
+  display: flex;
+  min-height: 65%;
+}
+
+.second-data-tooltips p {
+  background-color: #7BA2FF;
+}
+
+.second-data-tooltips p::after {
+  background-color: #7BA2FF;
+}
+
+.second-data-tooltips>* {
+  background-color: #7BA2FF;
+}
+
+.first-data-tooltips>.tip-1 {
+  top: 48px;
+  left: 2px;
+}
+
+.first-data-tooltips>.tip-2 {
+  top: 8px;
+  left: 47px;
+}
+
+.first-data-tooltips>.tip-3 {
+  top: 17px;
+  left: 88px;
+}
+
+.first-data-tooltips>.tip-4 {
+  top: 7px;
+  left: 128px;
+}
+
+.first-data-tooltips>.tip-5 {
+  top: 44px;
+  left: 169px;
+}
+
+.first-data-tooltips>.tip-6 {
+  top: 49px;
+  left: 203px;
+}
+
+.first-data-tooltips>.tip-7 {
+  top: 17px;
+  left: 245px;
+}
+
+.second-data-tooltips>.tip-1 {
+  top: 67px;
+  left: 2px;
+}
+
+.second-data-tooltips>.tip-2 {
+  top: 52px;
+  left: 47px;
+}
+
+.second-data-tooltips>.tip-3 {
+  top: 62px;
+  left: 88px;
+}
+
+.second-data-tooltips>.tip-4 {
+  top: 52px;
+  left: 128px;
+}
+
+.second-data-tooltips>.tip-5 {
+  top: 59px;
+  left: 169px;
+}
+
+.second-data-tooltips>.tip-6 {
+  top: 69px;
+  left: 203px;
+}
+
+.second-data-tooltips>.tip-7 {
+  top: 59px;
+  left: 245px;
+}

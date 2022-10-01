@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+
+.frame {
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to top right, #43389F 0%, #4ec6ca 100%);
+  color: #333;
+  font-family: 'Courier New', 'Courier', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* MY CSS */
+
+.container div {
+  display: inline-block;
+}
+
+.container>div:nth-child(3) {
+  margin-left: -20px;
+  z-index: -2;
+}
+
+.container p:first-of-type {
+  margin: 0;
+  line-height: 0.65;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.container p:last-of-type {
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.one {
+  position: relative;
+  content: "";
+  width: 20px;
+  height: 90px;
+  border-radius: 2px;
+  box-shadow: 2px 0px 15px 6px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.one::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 7px;
+  left: -1px;
+  width: 20px;
+  height: 40px;
+  border-radius: 2px;
+  transform-origin: top;
+  transform: rotate(50deg);
+  box-shadow: 2px 0px 15px 6px rgba(0, 0, 0, 0.2);
+  background-color: #fffffffd;
+}
+
+.zero {
+  position: relative;
+  z-index: -1;
+  content: "";
+  margin-left: -15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 20px solid white;
+  box-shadow: 2px 0px 15px 6px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}

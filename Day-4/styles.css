@@ -1,0 +1,108 @@
+:root {
+  --pyramid-shadow: #d8d5d5;
+  --pyramid-color: #F4F4F4;
+  --sky-color: #7DDFFC;
+  --sand-color: #F0DE75;
+  --sun-color: #FFEF00;
+  --background-color: #E56262;
+
+}
+
+.frame {
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--background-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* MY CSS */
+
+.white-circle {
+  display: grid;
+  place-content: center;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: white;
+  animation: scaling 3.5s ease 0s infinite alternate-reverse;
+}
+
+.white-circle-2 {
+  display: grid;
+  place-content: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
+  animation: scaling-2 3.5s ease 0.1s infinite alternate-reverse;
+}
+
+.white-circle-2::after {
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
+  animation: scaling-3 3.5s ease 0s infinite alternate-reverse;
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(0%);
+  }
+
+  50%,
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes scaling-2 {
+  0% {
+    transform: scale(0%);
+  }
+
+  25% {
+    transform: scale(0%);
+  }
+
+  60%,
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes scaling-3 {
+  0% {
+    transform: scale(0%);
+  }
+
+  25%,
+  40% {
+    transform: scale(0%);
+  }
+
+
+  100% {
+    transform: scale(100%);
+  }
+}

@@ -1,0 +1,206 @@
+.frame {
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #3FAF82;
+  color: #333;
+  font-family: 'Courier New', 'Courier', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* MY CSS */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+
+}
+
+.burger-lines {
+  position: relative;
+  z-index: 1;
+  width: 5rem;
+  height: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.burger-lines::before,
+.burger-lines::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  width: 5rem;
+  height: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.burger-lines::before {
+  transform: translate(-50%, -1.5rem);
+}
+
+.burger-lines::after {
+  transform: translate(-50%, 1.5rem);
+}
+
+.burger-button {
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  width: 5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.burger-button:checked+label {
+  width: 0;
+  transition: width 0.3s;
+}
+
+.burger-button:checked+label::before,
+.burger-button:checked+label::after {
+  transform-origin: top left;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.burger-button:checked+label::before {
+  animation-name: open;
+}
+
+.burger-button:checked+label::after {
+  animation-name: opentwo;
+}
+
+.burger-button:not(:checked)+label {
+  width: 5rem;
+  transition: width 0.1s;
+  transition-delay: 0.5s;
+}
+
+.burger-button:not(:checked)+label::before,
+.burger-button:not(:checked)+label::after {
+  transform-origin: top left;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.burger-button:not(:checked)+label::before {
+  animation-name: openreverse;
+}
+
+.burger-button:not(:checked)+label::after {
+  animation-name: opentworeverse;
+}
+
+@keyframes open {
+
+  0% {
+    transform: translate(-50%, -1.5rem);
+  }
+
+  25%,
+  40% {
+    transform: translate(-50%, 0rem);
+  }
+
+  100% {
+    transform: rotate(45deg) translate(-50%, 0rem);
+  }
+}
+
+@keyframes opentwo {
+
+  0% {
+    transform: translate(-50%, 1.5rem);
+  }
+
+  25%,
+  40% {
+    transform: translate(-50%, 0rem);
+  }
+
+  60% {
+    transform: rotate(45deg) translate(-50%, 0rem);
+  }
+
+  100% {
+    transform: rotate(135deg) translate(-45%, -0.3rem);
+  }
+}
+
+@keyframes openreverse {
+
+  0% {
+    transform: rotate(45deg) translate(-50%, 0rem);
+  }
+
+  25%,
+  40% {
+    transform: rotate(45deg) translate(-50%, 0rem);
+  }
+
+  60% {
+    transform: translate(-50%, 0rem);
+  }
+
+  100% {
+    transform: translate(-50%, -1.5rem);
+  }
+}
+
+@keyframes opentworeverse {
+
+  0% {
+    transform: rotate(135deg) translate(-45%, -0.3rem);
+  }
+
+  25%,
+  40% {
+    transform: rotate(45deg) translate(-50%, 0rem);
+  }
+
+  60% {
+    transform: translate(-50%, 0rem);
+  }
+
+  100% {
+    transform: translate(-50%, 1.5rem);
+  }
+}
+
+
+.preload *::after,
+.preload *::before {
+  animation-duration: 0s;
+  -webkit-animation-duration: 0s !important;
+}
